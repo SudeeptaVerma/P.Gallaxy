@@ -11,9 +11,11 @@ System.out.println("1.) Triangular");
 System.out.println("2.) Diamond");
 System.out.println("3.) X-Cross");
 System.out.println("4.) Hallow Diamond");
+System.out.println("5.) Arrow");
 System.out.println("Choose any one:");
 int n1=sc.nextInt();
-int n=5;
+System.out.println("How many lines of Galaxy do you want:");
+int n=sc.nextInt();
    
 if(n1==1)
     {
@@ -106,6 +108,34 @@ int nspaces = n / 2;
             System.out.println();
         }
 }
+else
+if(n1==5)
+{
+int nspaces = n / 2;
+        int nstars = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= nspaces; j++) {
+                if (i != n / 2 + 1) {
+                    System.out.print("\t");
+                } else {
+                    System.out.print("*\t");
+                }
+            }
+
+            for (int j = 1; j <= nstars; j++) {
+                System.out.print("*\t");
+            }
+
+            if (i <= n / 2) {
+                nstars++;
+            } else {
+                nstars--;
+            }
+
+            System.out.println();
+        }
+}
+
 else
 System.out.println("You Entered wrong choice");
 }
